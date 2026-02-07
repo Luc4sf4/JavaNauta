@@ -2,10 +2,15 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        int idade = 30;
+        long quantidadCachorros= 10L;
+        double salarioMensal = 4500.00;
+        char genero = 'M';
+        boolean empregadoJava = true;
 
-        System.out.println("Primeiro misturar os ingredientes  ");
-        System.out.println("Depois bater a massa ");
-        System.out.println("Depois assar o bolo ");
-
+        System.out.println("Idade: " + idade);
+        System.out.println("Salario: " + salarioMensal);
+        System.out.println("Genero: " + genero);
+        System.out.println("Empregado: " + empregadoJava);
     }
 }
