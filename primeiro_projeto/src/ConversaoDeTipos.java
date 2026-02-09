@@ -32,7 +32,5 @@ public class ConversaoDeTipos {
         System.out.println(numeroStringDouble + " -> " + numeroConvertidoDouble);
 
         System.out.println(numeroLong + " -> " + numeroConvertidoDouble);
-        System.out.println(numeroLongStringDois + " -> " + numeroConvertidoLong);
-
     }
 }
