@@ -27,5 +27,10 @@ public class EstruturaIfElse {
           else {
               System.out.println("Tem que economizar papae ");
           }
+
+          // ? -> if
+          // else -> else
+          String mensagem = (temDinheiro) ? "Pede um ifood" : "Vai ter que fazer a janta";
+        System.out.println(mensagem);
     }
 }
