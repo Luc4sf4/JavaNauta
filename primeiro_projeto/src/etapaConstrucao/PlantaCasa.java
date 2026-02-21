@@ -1,6 +1,6 @@
 package etapaConstrucao;
 
-public class PlantaCasa {
+public class PlantaCasa implements construcao{
     //Atributos
     public int metragem;
     public int numeroQuartos;
@@ -12,6 +12,7 @@ public class PlantaCasa {
     //private -> somente a classe pode acessar
     //protected -> acessivel dentro do mesmo pacote somente
 
+    @Override
     public void construir(){
         System.out.println("A casa foi construida! ");
         System.out.println("Metragem " + metragem);
@@ -19,6 +20,17 @@ public class PlantaCasa {
         System.out.println("Numero de banheiros " + numeroBanheiros);
         System.out.println("material " + material);
 
+    }
+
+    //Anotacao -> diz que esse metodo vem de uma intercace
+    @Override
+    public void pintar(String cor) {
+        System.out.println("Pintando a casa com a cor " + cor);
+    }
+
+    @Override
+    public int calcularCustoConstrucao(int custoPorMetro) {
+        return metragem + custoPorMetro;
     }
 
     //void -> nao exige retorno
