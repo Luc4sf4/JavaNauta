@@ -12,7 +12,7 @@ public class PlantaCasa {
     //private -> somente a classe pode acessar
     //protected -> acessivel dentro do mesmo pacote somente
 
-    protected void construir(){
+    public void construir(){
         System.out.println("A casa foi construida! ");
         System.out.println("Metragem " + metragem);
         System.out.println("Numero de quartos " + numeroQuartos);
@@ -24,5 +24,47 @@ public class PlantaCasa {
     public void pintar(){
         System.out.println("A casa foi pintada");
         System.out.println("cor " + cor);
+    }
+
+    public void mudarCorParede(String novaCor){
+        cor = novaCor;
+        pintar();
+    }
+
+    public void alterarCaracteristicas(int metros, int quartos, int banheiro, String mat){
+        metragem = metros;
+        quartos = numeroQuartos;
+        numeroBanheiros = banheiro;
+        mat = material;
+        construir();
+
+    }
+
+    public static void main(String[] args) {
+        //Criando um Objeto
+        PlantaCasa casa = new PlantaCasa();
+
+        //Inicializando os atributos
+        casa.numeroBanheiros = 2;
+        casa.numeroQuartos = 3;
+        casa.metragem = 70;
+        casa.material = "Tijolo";
+        casa.cor = "cinza";
+
+        casa.construir();
+        casa.pintar();
+
+        casa.mudarCorParede("Branco");
+        casa.alterarCaracteristicas(100, 2, 2, "Madeira");
+
+        PlantaCasa casaVizinho = new PlantaCasa();
+        casaVizinho.metragem = 200;
+        casaVizinho.material = "Alvenaria";
+        casaVizinho.numeroBanheiros = 1;
+        casaVizinho.numeroQuartos = 1;
+        casaVizinho.cor = "Amarelo";
+
+        casaVizinho.construir();
+        casaVizinho.pintar();
     }
 }
