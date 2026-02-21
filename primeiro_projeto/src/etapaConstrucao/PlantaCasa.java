@@ -21,9 +21,15 @@ public class PlantaCasa {
 
     }
 
+    //void -> nao exige retorno
     public void pintar(){
         System.out.println("A casa foi pintada");
         System.out.println("cor " + cor);
+    }
+
+    // se setado um tipo(primitivo ou nao), vai exigir retorno
+    public int somarMetragem(){
+        return metragem * numeroBanheiros + numeroQuartos;
     }
 
     public void mudarCorParede(String novaCor){
@@ -53,6 +59,10 @@ public class PlantaCasa {
 
         casa.construir();
         casa.pintar();
+
+        int resultado = casa.somarMetragem();
+        System.out.println(resultado);
+
 
         casa.mudarCorParede("Branco");
         casa.alterarCaracteristicas(100, 2, 2, "Madeira");
