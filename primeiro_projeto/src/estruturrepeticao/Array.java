@@ -1,7 +1,9 @@
+package estruturrepeticao;
+
 public class Array {
     public static void main(String[] args) {
 
-        //Declarar Array
+        //Declarar estruturrepeticao.Array
         int[] numeros = {10, 20, 30, 50, 1};
         String[] frutas;
 

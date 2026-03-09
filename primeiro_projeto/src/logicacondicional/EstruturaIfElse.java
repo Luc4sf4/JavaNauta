@@ -1,3 +1,5 @@
+package logicacondicional;
+
 public class EstruturaIfElse {
     public static void main(String[] args) {
 //        int idade = 30;

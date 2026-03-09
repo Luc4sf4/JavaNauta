@@ -1,10 +1,12 @@
+package estruturrepeticao;
+
+import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
-public class EstudoTreeMap {
+public class EstudoHashMap {
+
     public static void main(String[] args) {
-        TreeMap<String, Double> notasAlunos = new TreeMap<>();
-
+        HashMap<String, Double> notasAlunos = new HashMap<>();
         notasAlunos.put("Alice", 10.5);
         notasAlunos.put("Mateus", 8.0);
         notasAlunos.put("Maria", 9.9);
@@ -20,23 +22,11 @@ public class EstudoTreeMap {
             System.out.println(nome + ": " + valorNota);
         }
 
-        System.out.println("Primeira Chave: " + notasAlunos.firstKey());
-        System.out.println("Ultima chave: " + notasAlunos.lastKey());
+        double nota = notasAlunos.get("Alice");
+        System.out.println("A nota da Alice e: " + nota);
 
-        for (int i = 0; i < 5; i++) {
+        int tamanhoHash = notasAlunos.size();
 
-            if (i == 3) {
-
-                break;
-
-            }
-
-            System.out.println(i);
-
-        }
-
-
-
-
+        notasAlunos.remove("Maria");
     }
 }
