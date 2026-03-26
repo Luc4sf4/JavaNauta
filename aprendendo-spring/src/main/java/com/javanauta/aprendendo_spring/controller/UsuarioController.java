@@ -13,8 +13,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 @RequestMapping("/user")
 @RequiredArgsConstructor
 public class UsuarioController {
@@ -33,12 +34,6 @@ public class UsuarioController {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(usuarioDTO.getEmail(), usuarioDTO.getSenha())
         );
-
-        if(!Boolean.parseBoolean(usuarioDTO.getSenha())){
-            System.out.println("deu erro aqui");
-            System.out.println("aqui estao " +  usuarioDTO.getEmail() + usuarioDTO.getSenha());
-        }
-
         return jwtUtil.generateToken(authentication.getName());
     }
 
